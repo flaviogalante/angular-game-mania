@@ -1,0 +1,155 @@
+/* You can add global styles to this file, and also import other style files */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    color: var(--button-primary);
+    text-decoration: none;
+}
+
+body{
+    --background: #03002B;
+
+    background: var(--background); 
+    height: 100%;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+@media (max-width: 700px) {
+
+    #menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 210px;
+        right: 0px;
+        background: #03002B;
+        height: 0px;
+        transition: .6s;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+.left {
+    display: flex;
+}
+
+.left img {
+    max-width: 100%;
+    border-radius: 4px;
+    display: flex;
+}
+
+.search {
+    display: none;
+}
+
+.month{
+        padding-left: 1%;
+        padding-right: 1%;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+}   
+    
+.month img{
+        max-width: 90%;
+        border-radius: 4px;
+        display: flex;
+    }
+    
+.month div h2{
+        margin-top: 20px;
+        font-size: 30px;
+        line-height: 5px;
+    }
+
+.header-dois {
+        display: none;
+    }
+
+.mostsale {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mostsale img {
+        width: 60%;
+        display: flex;
+        border-radius: 4px;
+    }
+
+.weeksale {
+        display: flex;
+        flex-direction: column;
+    }
+.weeksale img {
+    width: 60%;
+    display: flex;
+    border-radius: 4px;
+}
+
+     .novidades {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+     }
+.rodape {
+    font-size: 10px;
+    text-align: center;
+}     
+  
+
+    #nav.active #menu {
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+    #menu a {
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(0, 0, 0, .05); 
+    }
+    #btn-mobile {
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: #e7e7e7;
+        cursor: pointer;
+        gap: .5rem;          
+}
+    #hamburguer {
+        border-top: 2px solid;
+        width: 20px;        
+    }
+    #hamburguer::after, #hamburguer::before {
+      content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+    #nav.active #hamburguer {
+        border-top-color: transparent;
+    }
+    #nav.active #hamburguer::before {
+        transform: rotate(135deg);
+    }
+    #nav.active #hamburguer::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+}
