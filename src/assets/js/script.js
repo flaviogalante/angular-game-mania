@@ -15,3 +15,11 @@ function toggleMenu(event) {
 
 btnMobile.addEventListener('click', toggleMenu);
 btnMobile.addEventListener('touchstart', toggleMenu);
+
+// NewsLetter ------------------------------------------
+function cadastrarNewsletter() {
+    let email = document.getElementById("campo-email").value
+
+    alert(email)
+    console.log(email)
+}
